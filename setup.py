@@ -12,7 +12,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='gcs-oauth2-boto-env-plugin',
-    version='0.1.2',
+    version='1.0.0',
     description='Google Storage auth2 plugin with support for passing service key via environment',
     long_description=readme,
     keywords='oauth2 gcs s3 boto plugin docker',
@@ -33,8 +33,8 @@ setup(
     ],
     py_modules=['gcs_oauth2_boto_env_plugin'],
     install_requires=[
-        'gcs_oauth2_boto_plugin==1.8',
+        'gcs_oauth2_boto_plugin==2.2',
         # https://github.com/google/oauth2client/issues/401
-        'oauth2client==1.5.2',
+        'oauth2client==4.1.3',
     ],
 )

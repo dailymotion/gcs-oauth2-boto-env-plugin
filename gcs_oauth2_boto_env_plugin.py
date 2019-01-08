@@ -39,8 +39,7 @@ class OAuth2ServiceAccountEnvAuth(AuthHandler):
             proxy_pass = config.get('Boto', 'proxy_pass', None)
 
         self.oauth2_client = OAuth2JsonServiceAccountClient(
-            json_key['client_id'], json_key['client_email'],
-            json_key['private_key_id'], json_key['private_key'],
+            json_key,
             access_token_cache=token_cache, auth_uri=GOOGLE_OAUTH2_PROVIDER_AUTHORIZATION_URI,
             token_uri=GOOGLE_OAUTH2_PROVIDER_TOKEN_URI,
             disable_ssl_certificate_validation=not(config.getbool('Boto', 'https_validate_certificates', True)),
